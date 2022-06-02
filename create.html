@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel='icon' type='image/xicon' href='icon.png'>
+  <meta name="viewport" content="width=device-width">
+  <title>Quizzle - Create</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload='createQuestions();' style='background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.wallpapersden.com%2Fimage%2Fdownload%2Fgeometry-shapes-minimalism-artwork_a2dlZ26UmZqaraWkpJRqZmdlrWhnZWU.jpg&f=1&nofb=1"); background-size: 100% auto; background-repeat: repeat-y;'>
+  <div class='header'>
+    <img src='icon.png' class='icon' onclick="home()">
+    Quizzle - Create
+    <a class='join' href='join.html'>Join a Game</a>
+  </div>
+  <div class="space"></div>
+  <div class='createQuestion' id='createQuestion'>
+    <label class='label1'>Correct answer: <input class='a' id='a1' type='text'></label>
+    <label class='label2'>Incorrect answer 1: <input class='a' id='a2' type='text'></label>
+    <label class='label3'>Incorrect answer 2: <input class='a' id='a3' type='text'></label>
+    <label class='label4'>Incorrect answer 3: <input class='a' id='a4' type='text'></label>
+    <label class='label5'>Question: <input class='q' id='q1' type='text'></label>
+    <button class="submitQuestion" id='submitQuestion' onclick='save()'>Save Question</button>
+  </div>
+  <button class='addQuestion' onclick='addQuestion();'>+</button>
+  <script src="script.js"></script>
+</body>
+
+</html>

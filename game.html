@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel='icon' type='image/xicon' href='icon.png'>
+  <meta name="viewport" content="width=device-width">
+  <title>Quizzle - Play</title>
+  <link href="game.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload='setQuestion();'>
+  <div class='header'>
+    <img src='icon.png' class='icon' onclick="home()">
+    Quizzle
+  </div>
+  <div class="questionbox" id='questionbox'>No question provided</div>
+  <div class='answer1 answerbox' id='answer1' onclick='checkAnswer("answer1")'>No answer provided</div>
+  <div class='answer2 answerbox' id='answer2' onclick='checkAnswer("answer2")'>No answer provided</div>
+  <div class='answer3 answerbox' id='answer3' onclick='checkAnswer("answer3")'>No answer provided</div>
+  <div class='answer4 answerbox' id='answer4' onclick='checkAnswer("answer4")'>No answer provided</div>
+  <div class='checkIfCorrect' id='check'></div>
+  <div class='continue' id='continue'>Click anywhere to continue</div>
+  <script src="script.js"></script>
+</body>

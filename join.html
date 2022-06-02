@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel='icon' type='image/xicon' href='icon.png'>
+  <meta name="viewport" content="width=device-width">
+  <title>Quizzle - Join a Game</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class='header'>
+    <img src='icon.png' class='icon' onclick="home()">
+    Quizzle
+  </div>
+  <div class='gamecode'></div>
+  <header class='title' id='title'>Enter game code</header>
+  <input class='input' id='info' type='text' placeholder='Game Code'>
+  <input type='button' class='submit' value='Go' onclick='enterGamecode()' id='submit' href='game.html'>
+  <p class='invalid' id='invalid'></p>
+  <script src="script.js"></script>
+</body>
+
+</html>

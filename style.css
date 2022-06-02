@@ -1,0 +1,248 @@
+body {
+  background: url("background.png");
+  font-size: 20px;
+  overflow-x: hidden;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.header {
+  position: fixed;
+  background: blue;
+  color: white;
+  font-size: 200%;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  cursor: default;
+  box-shadow: 0 0 5px black;
+  z-index: 999999;
+}
+.join {
+  position: fixed;
+  right: 15px;
+  top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 50%;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  color: white;
+  text-decoration: none;
+}
+.join:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+.create {
+  position: fixed;
+  left: 60px;
+  top: 12px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 50%;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  color: white;
+  text-decoration: none;
+}
+.create:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.2);
+}
+.title {
+  position: absolute;
+  font-size: 230%;
+  color: white;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.input {
+  background: white;
+  border: white 2px;
+  border-radius: 4px;
+  position: absolute;
+  font-size: 200%;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  text-align: center;
+  color: black;
+  width: 300px;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.gamecode {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 50%;
+  background: lightgray;
+  border-radius: 10px;
+}
+.invalid {
+  position: absolute;
+  top: 74%;
+  left: 50%;
+  color: red;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.submit {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  border: blue 2px;
+  border-radius: 10px;
+  font-size: 150%;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: white;
+  background: blue;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+.submit:hover {
+  font-size: 200%;
+}
+.icon {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: auto;
+  z-index: 9999999;
+  cursor: pointer;
+}
+.addQuestion {
+  position: absolute;
+  top: 110px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  background: blue;
+  border: 2px black;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.5s;
+  color: white;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  font-size: 300%;
+  z-index: 10;
+}
+.addQuestion:hover {
+  transform: scale(1.1) rotate(360deg);
+}
+.createQuestion {
+  position: absolute;
+  width: 100%;
+  top: 14%;
+  height: 70%;
+  z-index: -1;
+  background: gray;
+  border-radius: 20px;
+  opacity: 0;
+  transition: 0.5s;
+  left: 0;
+}
+.submitQuestion {
+  position: absolute;
+  opacity: 0;
+  top: 90%;
+  background: blue;
+  border-radius: 10px;
+  color: white;
+  font-size: 150%;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  cursor: pointer;
+  left: 35%;
+  transition: 0.5s;
+  border: none;
+}
+.submitQuestion:hover {
+  transform: scale(1.1);
+}
+label {
+  color: white;
+  font-size: 120%;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  width: auto;
+}
+.label1 {
+  position: relative;
+  top: 4%;
+  left: 5px;
+}
+.label2 {
+  position: absolute;
+  top: 15%;
+  left: 5px;
+}
+.label3 {
+  position: absolute;
+  top: 25%;
+  left: 5px;
+}
+.label4 {
+  position: absolute;
+  top: 35%;
+  left: 5px;
+}
+.label5 {
+  position: absolute;
+  top: 45%;
+  left: 5px;
+}
+.a, .q {
+  border: 2px white;
+  border-radius: 4px;
+}
+.questionDisplay {
+  background-color: rgba(255, 255, 255, .2);
+  color: #ffffff;
+  min-height: 30%;
+  font-weight: 1000;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  padding: 15px;
+  transition: 0.2s;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-left: 15px;
+  display: inline-block;
+}
+.questionDisplay hr {
+  min-width: 20%;
+  margin-left: 0;
+}
+.questionDisplay:hover {
+  transform: scale(0.95);
+  background: lightgray;
+  background-color: rgba(255, 255, 255, .15);  
+  backdrop-filter: blur(5px);
+}
+.space {
+  width: 100%;
+  height: 200px;
+}
