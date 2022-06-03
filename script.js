@@ -136,9 +136,9 @@ function save() {
     answers[answers.length - 1].first = answer1;
     answers[answers.length - 1].second = answer2;
     answers[answers.length - 1].third = answer3;
+    resetQuestions();
   }
   updateLists();
-  resetQuestions();
 }
 function resetQuestions() {
   location.reload();
