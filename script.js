@@ -180,8 +180,8 @@ function updateQuestion(y) {
   document.getElementById("createQuestion").style.zIndex = "-1";
   document.getElementById("submitQuestion").style.opacity = "0";
   document.getElementById("submitQuestion").style.zIndex = "-1";
-  document.getElementById(y).innerHTML = "Question " + (y + 1) + ")" + "<br>" + questions[y] + "<br><hr>" + "1) " + answers[y].correct + "<br>" + "2) " + answers[y].first + "<br>" + "3) " + answers[y].second + "<br>" + "4) " + answers[y].third + "<br><hr>" + "Correct answer: " + answers[y].correct;
   updateLists();
+  resetQuestions();
 }
 function updateLists() {
   localStorage.setItem("answers", JSON.stringify(answers));
