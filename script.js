@@ -141,11 +141,7 @@ function save() {
   resetQuestions();
 }
 function resetQuestions() {
-  for (i = 0; i < questions.length; i++) {
-    var deletediv = document.getElementById(i);
-    deletediv.parentNode.removeChild(deletediv);
-  }
-  createQuestions();
+  window.location.href = "./create.html";
 }
 function createQuestions() {
   if (localStorage.getItem("questions") != "") {
