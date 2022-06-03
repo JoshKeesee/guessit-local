@@ -141,7 +141,7 @@ function save() {
   resetQuestions();
 }
 function resetQuestions() {
-  document.location.reload();
+  location.reload();
 }
 function createQuestions() {
   if (localStorage.getItem("questions") != "") {
