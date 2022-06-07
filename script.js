@@ -107,6 +107,7 @@ function addQuestion() {
   document.getElementById("a4").value = "";
   document.getElementById("q1").value = "";
   document.getElementById("createQuestion").style.opacity = "1";
+  document.getElementById("createQuestion").style.marginTop = "220px";
   document.getElementById("createQuestion").style.zIndex = "11";
   document.getElementById("submitQuestion").style.opacity = "1";
   document.getElementById("submitQuestion").style.zIndex = "12";
@@ -117,6 +118,7 @@ function save() {
   answer2 = document.getElementById("a3").value;
   answer3 = document.getElementById("a4").value;
   document.getElementById("createQuestion").style.opacity = "0";
+  document.getElementById("createQuestion").style.marginTop = "-100px";
   document.getElementById("createQuestion").style.zIndex = "-1";
   document.getElementById("submitQuestion").style.opacity = "0";
   document.getElementById("submitQuestion").style.zIndex = "-1";
@@ -159,6 +161,7 @@ function createQuestions() {
 }
 function edit(y) {
   document.getElementById("createQuestion").style.opacity = "1";
+  document.getElementById("createQuestion").style.marginTop = "220px";
   document.getElementById("createQuestion").style.zIndex = "11";
   document.getElementById("submitQuestion").style.opacity = "1";
   document.getElementById("submitQuestion").style.zIndex = "12";
@@ -176,10 +179,6 @@ function updateQuestion(y) {
   answers[y].first = document.getElementById("a2").value;
   answers[y].second = document.getElementById("a3").value;
   answers[y].third = document.getElementById("a4").value;
-  document.getElementById("createQuestion").style.opacity = "0";
-  document.getElementById("createQuestion").style.zIndex = "-1";
-  document.getElementById("submitQuestion").style.opacity = "0";
-  document.getElementById("submitQuestion").style.zIndex = "-1";
   updateLists();
   resetQuestions();
 }
