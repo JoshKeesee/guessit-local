@@ -57,35 +57,31 @@ body {
   background: rgba(0, 0, 0, 0.2);
 }
 .title {
-  position: absolute;
-  font-size: 230%;
+  display: block;
+  font-size: 300%;
   color: white;
   font-weight: 1000;
   letter-spacing: 2px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1% 1%;
 }
 .input {
   background: white;
   border: white 2px;
   border-radius: 4px;
-  position: absolute;
+  display: block;
   font-size: 200%;
   font-weight: 1000;
   letter-spacing: 2px;
   text-align: center;
   color: black;
-  width: 300px;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  width: 50%;
+  margin: auto;
+  margin-top: 6%;
 }
 .gamecode {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -95,17 +91,12 @@ body {
   border-radius: 10px;
 }
 .invalid {
-  position: absolute;
-  top: 74%;
-  left: 50%;
+  position: relative;
   color: red;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  text-align: center;
 }
 .submit {
-  position: absolute;
-  top: 70%;
-  left: 50%;
+  display: block;
   border: blue 2px;
   border-radius: 10px;
   font-size: 150%;
@@ -114,12 +105,12 @@ body {
   cursor: pointer;
   color: white;
   background: blue;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   transition: 0.5s;
+  margin: auto;
+  margin-top: 5%;
 }
 .submit:hover {
-  font-size: 200%;
+  font-size: 120%;
 }
 .icon {
   position: fixed;
