@@ -1,5 +1,11 @@
-version: '2'
+version: '3.1'
 services:
+  php:
+    image: php:7.3-apache
+    ports:
+      - 80:80
+    volumes:
+      - ./:/var/www
   database_server:
     image: percona:5.7.31-centos
     restart: always
@@ -19,12 +25,3 @@ services:
       PMA_USER: root
       PMA_PASSWORD: password # Specify password
       UPLOAD_LIMIT: 1024M
-  web_server:
-    image: livingcog/centos-www-dev:latest
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./:/var/www
-    environment:
-      XDEBUG_CONFIG: remote_host=host.docker.internal profiler_enable=1 idekey=PHPSTORM xdebug.profiler_output_dir="/tmp"
