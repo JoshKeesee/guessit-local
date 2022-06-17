@@ -101,6 +101,7 @@ function random_item(items) {
   return items[Math.floor(Math.random() * items.length)];
 }
 function addQuestion() {
+  window.scrollTo(0, 0);
   document.getElementById("a1").value = "";
   document.getElementById("a2").value = "";
   document.getElementById("a3").value = "";
@@ -160,6 +161,7 @@ function createQuestions() {
   }
 }
 function edit(y) {
+  window.scrollTo(0, 0);
   document.getElementById("createQuestion").style.opacity = "1";
   document.getElementById("createQuestion").style.marginTop = "220px";
   document.getElementById("createQuestion").style.zIndex = "11";
