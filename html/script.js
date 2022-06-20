@@ -39,7 +39,7 @@ function enterGamecode() {
     document.getElementById("info").placeholder = "Nickname";
     document.getElementById("info").value = "";
     document.getElementById("title").innerHTML = "Enter your nickname";
-    document.getElementById("title").style.fontSize = "180%";
+    document.getElementById("title").style.fontSize = "260%";
     document.getElementById("submit").onclick = function() { enterNickname() };
   }
 }
