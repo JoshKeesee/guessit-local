@@ -1,7 +1,7 @@
 body {
   background-image: url("background.png");
   font-size: 20px;
-  background-size: 100% auto;
+  background-size: 100%;
   overflow-x: hidden;
   -webkit-user-select: none;
   -ms-user-select: none;
