@@ -9,6 +9,8 @@ body {
   scroll-behavior: smooth;
   background-repeat: no-repeat;
   background-color: rgb(116, 107, 255);
+  font-weight: 1000;
+  letter-spacing: 2px;
 }
 .header {
   position: fixed;
@@ -296,7 +298,7 @@ body {
 }
 .content3 {
   width: 97%;
-  height: 100%;
+  height: fit-content;
   position: absolute;
   top: 300%;
   left: 1%;
@@ -306,14 +308,29 @@ body {
   background-color: rgb(226, 226, 226);
   border-radius: 8px;
 }
-.ingameicon {
+.credit {
+  width: 100%;
   position: absolute;
-  top: 310%;
+  top: 404%;
+  left: 0;
+  text-align: center;
+  padding: 10px;
+  font-size: 2em;
+  background-color: white;
+}
+.homepage {
+  color: blue;
+  font-weight: 1000;
+  letter-spacing: 2px;
+}
+.ingameicon {
+  display: block;
+  margin-top: 5px;
   width: 90%;
   height: auto;
-  left: 5%;
+  margin-left: 5%;
   border-radius: 8px;
-  box-shadow: white 0 0 100px;
+  box-shadow: black 0 2px 20px;
 }
 @keyframes flip {
   50% {transform: rotate(180deg) scale(-1);}
