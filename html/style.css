@@ -8,7 +8,7 @@ body {
   user-select: none;
   scroll-behavior: smooth;
   background-repeat: no-repeat;
-  background-color: lightgray;
+  background-color: rgb(116, 107, 255);
 }
 .header {
   position: fixed;
@@ -219,4 +219,106 @@ body {
   background: lightgray;
   background-color: rgba(255, 255, 255, .15);  
   backdrop-filter: blur(5px);
+}
+.content {
+  width: 97%;
+  background-color: white;
+  height: fit-content;
+  padding: 10px;
+  position: absolute;
+  top: 18em;
+  left: 1%;
+  font-size: 2em;
+  transform: rotate(1deg);
+  text-align: center;
+  border-radius: 8px;
+}
+.icons {
+  border-radius: 50%;
+  width: 40%;
+  margin-left: 7%;
+  margin-top: 100px;
+  animation: slidein 3s;
+  box-shadow: white 0 0 100px;
+  transition: 0.2s;
+}
+.icons:hover {
+  transform: scale(0.95);
+}
+.contenticon {
+  width: 10%;
+  height: auto;
+  display: block;
+  transition: 0.2s;
+  margin-left: 46%;
+  margin-top: 10px;
+}
+.contenticon:hover {
+  transform: scale(0.95);
+}
+.content2 {
+  width: 97%;
+  position: absolute;
+  top: 200%;
+  left: 1%;
+  text-align: center;
+  padding: 10px;
+  font-size: 2em;
+  transform: rotate(-1deg);
+  background-color: white;
+  border-radius: 8px;
+}
+.createicon {
+  position: absolute;
+  top: 147%;
+  left: 27%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 10em;
+  background: rgba(0, 0, 225, 0.8);
+  animation: flip 4s;
+  animation-iteration-count: infinite;
+  color: white;
+  text-decoration: none;
+}
+.joinicon {
+  position: absolute;
+  top: 247%;
+  left: 20%;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 10em;
+  background: rgba(0, 0, 225, 0.8);
+  animation: flip 4s 1s;
+  animation-iteration-count: infinite;
+  color: white;
+  text-decoration: none;
+}
+.content3 {
+  width: 97%;
+  height: 100%;
+  position: absolute;
+  top: 300%;
+  left: 1%;
+  text-align: center;
+  padding: 10px;
+  font-size: 2em;
+  background-color: rgb(226, 226, 226);
+  border-radius: 8px;
+}
+.ingameicon {
+  position: absolute;
+  top: 310%;
+  width: 90%;
+  height: auto;
+  left: 5%;
+  border-radius: 8px;
+  box-shadow: white 0 0 100px;
+}
+@keyframes flip {
+  50% {transform: rotate(180deg) scale(-1);}
+}
+@keyframes slidein {
+  0% {margin-top: -40%; transform: rotate(-360deg);}
+  100% {margin-top: 100px; transform: rotate(0deg);}
 }
