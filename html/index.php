@@ -8,7 +8,7 @@
   <title>Guessit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
   <?php
-  $servername = "localhost";
+  $servername = "database_server";
   $username = "root";
   $password = "password";
   
