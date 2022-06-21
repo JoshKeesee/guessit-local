@@ -25,7 +25,7 @@
 
 <body>
   <div class='header'>
-    <img src='icon.png' class='icon' onclick="home()">
+    <img src='icon.png' class='icon'>
     Guessit
     <a class='join' href='join.html'>Join Game</a>
     <a class='create' href='create.html'>Create+</a>
