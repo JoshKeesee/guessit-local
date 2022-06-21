@@ -223,7 +223,7 @@ body {
   backdrop-filter: blur(5px);
 }
 .content {
-  width: 97%;
+  width: 96%;
   background-color: white;
   height: fit-content;
   padding: 10px;
@@ -262,7 +262,7 @@ body {
   transform: scale(0.95);
 }
 .content2 {
-  width: 97%;
+  width: 96%;
   display: block;
   margin-top: 7%;
   margin-left: 1%;
@@ -280,12 +280,12 @@ body {
 .createicon {
   display: block;
   margin-top: 10%;
-  margin-left: 26%;
+  margin-left: 33%;
   padding: 2px;
-  width: 55%;
+  width: fit-content;
   text-align: center;
   border-radius: 10px;
-  font-size: 10em;
+  font-size: 20vmin;
   background: rgba(0, 0, 225, 0.8);
   animation: flip 4s;
   animation-iteration-count: infinite;
@@ -295,12 +295,12 @@ body {
 .joinicon {
   display: block;
   margin-top: 10%;
-  margin-left: 26%;
+  margin-left: 33%;
   padding: 2px;
-  width: 55%;
+  width: fit-content;
   text-align: center;
   border-radius: 10px;
-  font-size: 8em;
+  font-size: 16vmin;
   background: rgba(0, 0, 225, 0.8);
   animation: flip 4s;
   animation-delay: 1s;
@@ -309,7 +309,7 @@ body {
   text-decoration: none;
 }
 .content3 {
-  width: 97%;
+  width: 96%;
   height: fit-content;
   display: block;
   margin-top: 10%;
@@ -340,7 +340,7 @@ body {
 }
 .ingameicon {
   display: block;
-  margin-top: 5px;
+  margin-top: 10px;
   width: 90%;
   height: auto;
   margin-left: 5%;
