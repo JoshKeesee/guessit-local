@@ -47,7 +47,7 @@ body {
 }
 .create {
   position: fixed;
-  left: 75px;
+  left: 70px;
   top: 12px;
   padding: 10px;
   border-radius: 10px;
@@ -285,7 +285,7 @@ body {
   width: fit-content;
   text-align: center;
   border-radius: 10px;
-  font-size: 20vmin;
+  font-size: 15vmin;
   background: rgba(0, 0, 225, 0.8);
   animation: flip 4s;
   animation-iteration-count: infinite;
