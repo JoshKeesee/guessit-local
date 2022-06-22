@@ -189,5 +189,5 @@ function updateLists() {
   localStorage.setItem("questions", JSON.stringify(questions));
 }
 function home() {
-  window.location.href = "./index.php";
+  window.location.href = "./index.html";
 }
