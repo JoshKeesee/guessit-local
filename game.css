@@ -1,5 +1,7 @@
-body {
+html, body {
   overflow-x: hidden;
+}
+body {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
