@@ -1,7 +1,5 @@
-html, body {
-  overflow-x: hidden;
-}
 body {
+  overflow-x: hidden;
   background-image: url("background.png");
   font-size: 20px;
   background-size: 100%;
