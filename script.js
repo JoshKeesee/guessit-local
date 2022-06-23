@@ -45,7 +45,7 @@ function enterGamecode() {
 }
 function enterNickname() {
   nickname = document.getElementById("info").value;
-  window.location.href = "game.html";
+  window.location.href = "game";
 }
 function setQuestion() {
   random = Math.floor(Math.random() * 4) + 1;
