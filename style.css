@@ -11,6 +11,7 @@ body {
   background-color: rgb(116, 107, 255);
   font-weight: 1000;
   letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .header {
   position: fixed;
@@ -27,6 +28,7 @@ body {
   cursor: default;
   box-shadow: 0 0 5px black;
   z-index: 999999;
+  transition: 0.5s;
 }
 .join {
   position: fixed;
@@ -126,6 +128,7 @@ body {
   height: auto;
   z-index: 9999999;
   cursor: pointer;
+  transition: 0.5s;
 }
 .addQuestion {
   position: absolute;

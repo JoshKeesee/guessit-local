@@ -191,3 +191,14 @@ function updateLists() {
 function home() {
   window.location.href = "./index.html";
 }
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.querySelector(".header").style.fontSize = "2vmin";
+    document.querySelector(".icon").style.width = "5vmin";
+  } else {
+    document.querySelector(".header").style.fontSize = "4vmin";
+    document.querySelector(".icon").style.width = "6.5vmin";
+  }
+} 
