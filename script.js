@@ -189,7 +189,7 @@ function updateLists() {
   localStorage.setItem("questions", JSON.stringify(questions));
 }
 function home() {
-  window.location.href = "./index";
+  window.location.href = "./home";
 }
 window.onscroll = function() {scrollFunction()};
 
