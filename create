@@ -13,7 +13,7 @@
   <div class='header'>
     <img src='icon.png' class='icon' onclick="home()">
     Guessit
-    <a class='join' href='join.html'>Join Game</a>
+    <a class='join' href='join'>Join Game</a>
   </div>
   <div class='createQuestion' id='createQuestion'>
     <label class='label'>Correct answer: <input class='a' id='a1' type='text'></label>
