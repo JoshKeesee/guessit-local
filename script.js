@@ -30,6 +30,7 @@ function enterGamecode() {
   questions = JSON.parse(localStorage.getItem("questions"));
   answers = JSON.parse(localStorage.getItem("answers"));
   gamecode = document.getElementById("info").value;
+  localStorage.setItem("gamecode", gamecode);
   if (!(codes.includes(gamecode))) {
     document.getElementById("invalid").innerHTML = "Game not found";
   } else if (questions.length === 0) {
@@ -46,6 +47,7 @@ function enterGamecode() {
 function enterNickname() {
   nickname = document.getElementById("info").value;
   window.location.href = "game";
+  localStorage.setItem("nickname", nickname);
 }
 function setQuestion() {
   random = Math.floor(Math.random() * 4) + 1;
@@ -86,6 +88,13 @@ function checkAnswer(x) {
     document.getElementById("check").style.background = "red";
     document.getElementById("check").style.zIndex = "10";
   }
+}
+function setGamecode() {
+  gamecode = localStorage.getItem("gamecode");
+  nickname = localStorage.getItem("nickname");
+  gamecode = "1234";
+  nickname = "Josh";
+  document.querySelector(".nickname").innerHTML = nickname;
 }
 function hideCheck() {
   document.getElementById("check").style.zIndex = "-1";
