@@ -245,6 +245,8 @@ body {
 .icons {
   border-radius: 50%;
   width: 40%;
+  background: white;
+  text-align: center;
   margin-left: 7%;
   margin-top: 100px;
   box-shadow: white 0 0 100px;
