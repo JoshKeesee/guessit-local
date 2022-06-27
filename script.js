@@ -17,6 +17,7 @@ let answer1;
 let answer2;
 let answer3;
 let correct1;
+let players = [];
 if (document.getElementById("info") != null) {
   let input = document.getElementById("info");
   input.addEventListener("keypress", function(event) {
@@ -95,9 +96,12 @@ function checkAnswer(x) {
 function setGamecode() {
   gamecode = localStorage.getItem("gamecode");
   nickname = localStorage.getItem("nickname");
-  gamecode = "1234";
-  nickname = "Josh";
   document.querySelector(".nickname").innerHTML = nickname;
+  if (JSON.parse(localStorage.getItem("players")) != "") {
+    players = JSON.parse(localStorage.getItem("players"));
+  }
+  players.push(nickname);
+  localStorage.setItem("players", JSON.stringify(players));
 }
 function hideCheck() {
   document.getElementById("check").style.zIndex = "-1";

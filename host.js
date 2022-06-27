@@ -25,3 +25,13 @@ function removegame() {
   codes.splice(gamecode - 1, 1);
   localStorage.setItem("codes", JSON.stringify(codes));
 }
+function addplayers() {
+  players = JSON.parse(localStorage.getItem("players"));
+  for (let i = 0; i < players.length; i++) {
+    var div = document.createElement("div");
+    div.className = "player";
+    div.innerHTML = players[i];
+    document.appendChild(div);
+  }
+  setTimeout(addplayers, 1000);
+}
