@@ -2,7 +2,7 @@ if (localStorage.getItem("codes") != "") {
   var codes = JSON.parse(localStorage.getItem("codes"));
   var gamecode = JSON.parse(codes[codes.length - 1]) + 1;
 } else {
-  var codes = [""];
+  var codes = ["1"];
   var gamecode = JSON.parse(codes[codes.length - 1]) + 1;
 }
 var elem = document.documentElement;
