@@ -32,7 +32,7 @@ function removegame() {
   localStorage.setItem("codes", JSON.stringify(codes));
 }
 function reload() {
-  window.location.href = "";
+  window.location.href = "#";
 }
 function wait() {
   setTimeout(reload, 5000);
