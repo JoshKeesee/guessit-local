@@ -5,10 +5,10 @@ if (localStorage.getItem("codes") != "") {
   var codes = ["0"];
   var gamecode = JSON.parse(codes[codes.length - 1]) + 1;
 }
-if (JSON.parse(localStorage.getItem("players")) === "undefined") {
+if (localStorage.getItem("players") === undefined) {
   var players = [""];
 } else {
-  var players = JSON.parse(localStorage.getItem("players"));
+  var players = localStorage.getItem("players");
 }
 if (localStorage.getItem("reload") != null && localStorage.getItem("reload") != "") {
   var reloadto = localStorage.getItem("reload");
