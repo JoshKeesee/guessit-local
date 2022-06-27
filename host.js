@@ -30,7 +30,10 @@ function removegame() {
 function reload() {
   window.location.href = "";
 }
-function addplayers() {
+function wait() {
+  setTimeout(reload, 10000);
+}
+addplayers() {
   players = JSON.parse(localStorage.getItem("players"));
   for (let i = 0; i < players.length - 1; i++) {
     var div = document.createElement("div");
@@ -38,5 +41,5 @@ function addplayers() {
     div.innerHTML = players[i];
     document.getElementById("players").appendChild(div);
   }
-  setTimeout(reload, 10000);
+  setTimeout(addplayers, 0);
 }
