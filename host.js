@@ -10,6 +10,11 @@ if (JSON.parse(localStorage.getItem("players")) === "") {
 } else {
   var players = JSON.parse(localStorage.getItem("players"));
 }
+if (localStorage.getItem("reload") != null && localStorage.getItem("reload") != "") {
+  var reloadto = localStorage.getItem("reload");
+} else {
+  var reloadto = '';
+}
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -32,7 +37,13 @@ function removegame() {
   localStorage.setItem("codes", JSON.stringify(codes));
 }
 function reload() {
-  window.location.href = "#";
+  if (reloadto === "#") {
+    reloadto = "";
+  } else {
+    reloadto = "#";
+  }
+  localStorage.setItem("reload", reloadto);
+  window.location.href = reloadto;
 }
 function wait() {
   setTimeout(reload, 5000);
