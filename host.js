@@ -14,7 +14,7 @@ function addgame() {
   } else {
     var codes = [];
   }
-  var gamecode = JSON.parse(codes(codes.length)) + 1;
+  var gamecode = JSON.parse(codes[codes.length]) + 1;
   codes.push(JSON.stringify(gamecode));
   localStorage.setItem("codes", JSON.stringify(codes));
   document.querySelector(".code").innerHTML = gamecode;
