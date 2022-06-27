@@ -16,7 +16,7 @@ body {
     font-size: 550%;
     font-weight: 1000;
     letter-spacing: 2px;
-    background: blue;
+    background: linear-gradient(to bottom right, blue, rgb(90, 164, 255));
     padding: 40px;
     box-shadow: 0 0 6px black;
     transition: 0.2s;
