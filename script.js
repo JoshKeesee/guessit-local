@@ -1,4 +1,4 @@
-let codes = [''];
+let codes = [];
 let gamecode;
 let nickname;
 let questions = ["What is 3 * 3?", "What is 3 - 2?"];
