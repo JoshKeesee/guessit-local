@@ -19,6 +19,7 @@ function addgame() {
   codes.push(JSON.stringify(gamecode));
   localStorage.setItem("codes", JSON.stringify(codes));
   document.querySelector(".code").innerHTML = gamecode;
+  localStorage.setItem("players", "");
 }
 function removegame() {
   codes = JSON.parse(localStorage.getItem("codes"));
