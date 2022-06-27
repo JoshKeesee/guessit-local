@@ -28,7 +28,7 @@ function removegame() {
   localStorage.setItem("codes", JSON.stringify(codes));
 }
 function addplayers() {
-  window.location.href = "";
+  window.location.href = "#";
   players = JSON.parse(localStorage.getItem("players"));
   for (let i = 0; i < players.length - 1; i++) {
     var div = document.createElement("div");
