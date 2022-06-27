@@ -28,12 +28,13 @@ function removegame() {
   localStorage.setItem("codes", JSON.stringify(codes));
 }
 function addplayers() {
+  window.location.href = "";
   players = JSON.parse(localStorage.getItem("players"));
   for (let i = 0; i < players.length - 1; i++) {
     var div = document.createElement("div");
     div.className = "player";
     div.innerHTML = players[i];
-    document.body.appendChild(div);
+    document.getElementById("players").appendChild(div);
   }
   setTimeout(addplayers, 1000);
 }
