@@ -13,7 +13,7 @@ if (localStorage.getItem("players") === undefined) {
 if (localStorage.getItem("reload") != null && localStorage.getItem("reload") != "") {
   var reloadto = localStorage.getItem("reload");
 } else {
-  var reloadto = '~';
+  var reloadto = '';
 }
 var elem = document.documentElement;
 function openFullscreen() {
@@ -38,7 +38,7 @@ function removegame() {
 }
 function reload() {
   if (reloadto === "#") {
-    reloadto = "~";
+    reloadto = "";
   } else {
     reloadto = "#";
   }
