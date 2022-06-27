@@ -5,7 +5,7 @@ if (localStorage.getItem("codes") != "") {
   var codes = ["0"];
   var gamecode = JSON.parse(codes[codes.length - 1]) + 1;
 }
-if (JSON.parse(localStorage.getItem("players")) === null) {
+if (JSON.parse(localStorage.getItem("players")) === undefined) {
   var players = [""];
 } else {
   var players = JSON.parse(localStorage.getItem("players"));
