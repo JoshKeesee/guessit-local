@@ -9,7 +9,7 @@ function openFullscreen() {
   }
 }
 function addgame() {
-  if (localStorage.getItem("codes") != null) {
+  if (localStorage.getItem("codes") != "") {
     var codes = JSON.parse(localStorage.getItem("codes"));
   } else {
     var codes = [];
