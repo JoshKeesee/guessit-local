@@ -10,12 +10,12 @@ function openFullscreen() {
 }
 function addgame() {
   if (localStorage.getItem("codes") != null) {
-    var codes = localStorage.getItem("codes");
+    var codes = JSON.parse(localStorage.getItem("codes"));
   } else {
     var codes = [];
   }
   var gamecode = codes.length + 1;
-  codes.push(JSON.stringify(codes.length + 1));
+  codes.push(JSON.stringify(gamecode));
   localStorage.setItem("codes", JSON.stringify(codes));
   document.querySelector(".code").innerHTML = gamecode;
 }
