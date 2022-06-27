@@ -22,7 +22,6 @@ function addgame() {
 }
 function removegame() {
   codes = localStorage.getItem("codes");
-  gamecode = localStorage.getItem("gamecode");
   codes.splice(gamecode - 1, 1);
   localStorage.setItem("codes", codes);
 }
