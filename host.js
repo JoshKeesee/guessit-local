@@ -27,8 +27,10 @@ function removegame() {
   codes.splice(gamecode - 1, 1);
   localStorage.setItem("codes", JSON.stringify(codes));
 }
-function addplayers() {
+function reload() {
   window.location.href = "#";
+}
+function addplayers() {
   players = JSON.parse(localStorage.getItem("players"));
   for (let i = 0; i < players.length - 1; i++) {
     var div = document.createElement("div");
@@ -36,5 +38,5 @@ function addplayers() {
     div.innerHTML = players[i];
     document.getElementById("players").appendChild(div);
   }
-  setTimeout(addplayers, 10000);
+  setTimeout(reload, 10000);
 }
