@@ -100,7 +100,7 @@ function setGamecode() {
   if (JSON.parse(localStorage.getItem("players")) != "") {
     players = JSON.parse(localStorage.getItem("players"));
   }
-  players.push(nickname);
+  players.splice(players.length - 1, 0, nickname);
   localStorage.setItem("players", JSON.stringify(players));
 }
 function hideCheck() {
