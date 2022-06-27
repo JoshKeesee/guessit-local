@@ -33,7 +33,7 @@ function reload() {
 function wait() {
   setTimeout(reload, 10000);
 }
-addplayers() {
+function addplayers() {
   players = JSON.parse(localStorage.getItem("players"));
   for (let i = 0; i < players.length - 1; i++) {
     var div = document.createElement("div");
