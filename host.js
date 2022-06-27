@@ -36,5 +36,5 @@ function addplayers() {
     div.innerHTML = players[i];
     document.getElementById("players").appendChild(div);
   }
-  setTimeout(addplayers, 5000);
+  setTimeout(addplayers, 10000);
 }
