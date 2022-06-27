@@ -209,4 +209,4 @@ function scrollFunction() {
     document.querySelector(".header").style.fontSize = "4vmin";
     document.querySelector(".icon").style.width = "6.5vmin";
   }
-} 
+}

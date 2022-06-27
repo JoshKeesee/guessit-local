@@ -1,0 +1,105 @@
+body {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    scroll-behavior: smooth;
+    background: rgb(116, 107, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.header {
+    width: 100%;
+    margin: 0;
+    color: white;
+    font-size: 550%;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    background: blue;
+    padding: 40px;
+    box-shadow: 0 0 6px black;
+    transition: 0.2s;
+}
+.joingameinfo {
+    font-size: 30%;
+    font-weight: 0;
+    font-family: default;
+    text-decoration: none;
+    letter-spacing: 0;
+    display: inline-block;
+    width: 30%;
+    margin-left: 5%;
+    text-align: center;
+}
+.link {
+    font-size: 110%;
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+}
+.code {
+    font-size: 150%;
+    padding: 0;
+    margin: 0;
+    margin-left: 5%;
+    display: inline-block;
+    text-shadow: 0 0 10px gray;
+}
+.fullscreen {
+    display: inline-block;
+    margin-left: 2%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.fullscreen:hover {
+    transform: scale(1.05);
+}
+.start {
+    margin: 20px;
+    background: white;
+    padding: 4px;
+    font-size: 200%;
+    border: none;
+    border-radius: 8px;
+    font-weight: 1000;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 0 10px black;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.start:hover {
+    transform: scale(1.05);
+}
+.numplayers {
+    margin: 20px;
+    background: white;
+    padding: 4px;
+    font-size: 200%;
+    border: none;
+    border-radius: 8px;
+    font-weight: 1000;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 0 10px black;
+    text-align: center;
+}
+.player {
+    background: rgba(0,0,0,0.2);
+    color: white;
+    padding: 8px;
+    margin: 10px;
+    font-size: 150%;
+    font-weight: 1000;
+    width: fit-content;
+    border-radius: 8px;
+    display: inline-block;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.player:hover {
+    transform: scale(1.05);
+    -webkit-text-decoration-line: line-through;
+    text-decoration-line: line-through; 
+}
