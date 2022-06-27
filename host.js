@@ -8,13 +8,13 @@ function openFullscreen() {
     elem.msRequestFullscreen();
   }
 }
-if (localStorage.getItem("codes") != null) {
-  let codes = localStorage.getItem("codes");
-} else {
-  let codes = [];
-}
 function addgame() {
-  let gamecode = codes.length;
+  if (localStorage.getItem("codes") != null) {
+    var codes = localStorage.getItem("codes");
+  } else {
+    var codes = [];
+  }
+  var gamecode = codes.length;
   codes.push(JSON.stringify(codes.length + 1));
   localStorage.setItem("codes", JSON.stringify(codes));
   document.querySelector(".code").innerHTML = gamecode;
