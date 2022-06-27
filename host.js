@@ -6,9 +6,9 @@ if (localStorage.getItem("codes") != "") {
   var gamecode = JSON.parse(codes[codes.length - 1]) + 1;
 }
 if (JSON.parse(localStorage.getItem("players")) === "") {
-  let players = [""];
+  var players = [""];
 } else {
-  let players;
+  var players = JSON.parse(localStorage.getItem("players"));
 }
 var elem = document.documentElement;
 function openFullscreen() {
