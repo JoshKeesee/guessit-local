@@ -1,4 +1,4 @@
-let codes = ['1234'];
+let codes = [''];
 let gamecode;
 let nickname;
 let questions = ["What is 3 * 3?", "What is 3 - 2?"];
@@ -31,6 +31,7 @@ function enterGamecode() {
   answers = JSON.parse(localStorage.getItem("answers"));
   gamecode = document.getElementById("info").value;
   localStorage.setItem("gamecode", gamecode);
+  codes = JSON.parse(localStorage.getItem("codes"));
   if (!(codes.includes(gamecode))) {
     document.getElementById("invalid").innerHTML = "Game not found";
   } else if (questions.length === 0) {
