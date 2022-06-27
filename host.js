@@ -35,7 +35,7 @@ function reload() {
   window.location.href = "";
 }
 function wait() {
-  setTimeout(reload, 10000);
+  setTimeout(reload, 5000);
 }
 function addplayers() {
   players = JSON.parse(localStorage.getItem("players"));
@@ -45,5 +45,4 @@ function addplayers() {
     div.innerHTML = players[i];
     document.body.appendChild(div);
   }
-  setTimeout(addplayers, 0);
 }
