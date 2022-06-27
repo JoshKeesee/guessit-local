@@ -12,7 +12,7 @@ function addgame() {
   if (localStorage.getItem("codes") != "") {
     var codes = JSON.parse(localStorage.getItem("codes"));
   } else {
-    var codes = [];
+    var codes = ["1"];
   }
   var gamecode = JSON.parse(codes[codes.length - 1]) + 1;
   codes.push(JSON.stringify(gamecode));
