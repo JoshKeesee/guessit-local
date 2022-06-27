@@ -21,7 +21,7 @@ function addgame() {
   document.querySelector(".code").innerHTML = gamecode;
 }
 function removegame() {
-  codes = localStorage.getItem("codes");
+  codes = JSON.parse(localStorage.getItem("codes"));
   codes.splice(gamecode - 1, 1);
   localStorage.setItem("codes", codes);
 }
