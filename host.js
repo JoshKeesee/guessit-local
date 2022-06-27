@@ -5,6 +5,7 @@ if (localStorage.getItem("codes") != "") {
   var codes = ["0"];
   var gamecode = JSON.parse(codes[codes.length - 1]) + 1;
 }
+let players = [""];
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
