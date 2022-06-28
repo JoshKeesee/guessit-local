@@ -218,7 +218,7 @@ function scrollFunction() {
   }
 }
 function host() {
-  localStorage.setItem("players", [""]);
+  localStorage.setItem("players", JSON.stringify([""]));
   localStorage.setItem("start", "0");
   window.location.href = 'host';
 }
