@@ -34,18 +34,18 @@ function removegame() {
 }
 function reload() {
   reloadto = localStorage.getItem("reload");
-  if (reloadto === "#") {
-    reloadto = "";
+  if (reloadto === "1") {
+    reloadto = "0";
     localStorage.setItem("reload", reloadto);
-    reloadpage();
+    reloadpage("#r=" + reloadto);
   } else {
-    reloadto = "#";
+    reloadto = "1";
     localStorage.setItem("reload", reloadto);
-    setTimeout(reloadpage, 5000);
+    reloadpage("#r=" + reloadto);
   }
 }
-function reloadpage() {
-  window.location.href = reloadto;
+function reloadpage(r) {
+  window.location.href = r;
 }
 function wait() {
   setTimeout(reload, 5000);
