@@ -97,7 +97,7 @@ function setGamecode() {
   gamecode = localStorage.getItem("gamecode");
   nickname = localStorage.getItem("nickname");
   document.querySelector(".nickname").innerHTML = nickname;
-  if (JSON.parse(localStorage.getItem("players")) != "") {
+  if (JSON.parse(localStorage.getItem("players")) != "" && localStorage.getItem("players") != null) {
     players = JSON.parse(localStorage.getItem("players"));
   }
   players.splice(players.length - 1, 0, nickname);
