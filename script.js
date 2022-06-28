@@ -97,11 +97,11 @@ function setGamecode() {
   gamecode = localStorage.getItem("gamecode");
   nickname = localStorage.getItem("nickname");
   document.querySelector(".nickname").innerHTML = nickname;
-  if (JSON.parse(localStorage.getItem("players")) != "" && localStorage.getItem("players") != null) {
-    players = JSON.parse(localStorage.getItem("players"));
+  if (localStorage.getItem("players") != "" && localStorage.getItem("players") != null) {
+    players = localStorage.getItem("players");
   }
   players.splice(players.length - 1, 0, nickname);
-  localStorage.setItem("players", JSON.stringify(players));
+  localStorage.setItem("players", players);
 }
 function hideCheck() {
   document.getElementById("check").style.zIndex = "-1";

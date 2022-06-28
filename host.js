@@ -8,7 +8,7 @@ if (localStorage.getItem("codes") != "") {
 if (localStorage.getItem("players") === null || localStorage.getItem("players") === "") {
   var players = [""];
 } else {
-  var players = JSON.parse(localStorage.getItem("players"));
+  var players = localStorage.getItem("players");
 }
 if (localStorage.getItem("reload") != null && localStorage.getItem("reload") != "") {
   var reloadto = localStorage.getItem("reload");
@@ -29,7 +29,7 @@ function addgame() {
   codes.push(JSON.stringify(gamecode));
   localStorage.setItem("codes", JSON.stringify(codes));
   document.querySelector(".code").innerHTML = gamecode;
-  localStorage.setItem("players", JSON.stringify(players));
+  localStorage.setItem("players", players);
 }
 function removegame() {
   codes = JSON.parse(localStorage.getItem("codes"));
@@ -49,7 +49,7 @@ function wait() {
   setTimeout(reload, 5000);
 }
 function addplayers() {
-  players = JSON.parse(localStorage.getItem("players"));
+  players = localStorage.getItem("players");
   for (let i = 0; i < players.length - 1; i++) {
     var div = document.createElement("div");
     div.className = "player";
