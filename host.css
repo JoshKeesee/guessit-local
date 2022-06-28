@@ -96,10 +96,4 @@ body {
     border-radius: 8px;
     display: inline-block;
     transition: 0.2s;
-    cursor: pointer;
-}
-.player:hover {
-    transform: scale(1.05);
-    -webkit-text-decoration-line: line-through;
-    text-decoration-line: line-through; 
 }
