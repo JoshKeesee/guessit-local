@@ -49,3 +49,6 @@ function addplayers() {
     }
   }
 }
+function start() {
+  localStorage.setItem("start", "1");
+}

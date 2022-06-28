@@ -56,7 +56,7 @@ function enterNickname() {
   players.splice(players.length - 1, 0, nickname);
   localStorage.setItem("players", JSON.stringify(players));
   localStorage.setItem("nickname", nickname);
-  window.location.href = "game";
+  window.location.href = "lobby";
 }
 function setQuestion() {
   random = Math.floor(Math.random() * 4) + 1;
@@ -219,5 +219,6 @@ function scrollFunction() {
 }
 function host() {
   localStorage.setItem("players", [""]);
+  localStorage.setItem("start", "0");
   window.location.href = 'host';
 }
