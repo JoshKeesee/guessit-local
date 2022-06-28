@@ -51,6 +51,7 @@ function addplayers() {
   }
 }
 function start() {
+  var time = document.querySelector("time").innerHTML;
   localStorage.setItem("start", "1");
-  window.location.href = "/guessit/host/play";
+  window.location.href = "/guessit/host/play?time=" + time;
 }

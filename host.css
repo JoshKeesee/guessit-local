@@ -97,3 +97,9 @@ body {
     display: inline-block;
     transition: 0.2s;
 }
+.time {
+    font-size: 200%;
+    border: none;
+    width: 420px;
+    border-radius: 30px;
+}

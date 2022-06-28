@@ -1,5 +1,5 @@
 var time = document.getElementsByClassName("timer");
-var timings = 10;  
+var timings = gup("time");
 var i = 0;  
 var myInterval = setInterval(Timeout, 1000);  
 function Timeout() {  
@@ -19,4 +19,8 @@ function checkIfDone() {
 }
 function end() {
     window.location.href = "/guessit/host/final";
+}
+function gup (name) {
+    name = RegExp ('[?&]' + name.replace (/([[\]])/, '\\$1') + '=([^&#]*)');
+    return (window.location.href.match (name) || ['', ''])[1];
 }
