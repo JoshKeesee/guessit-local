@@ -18,5 +18,5 @@ function checkIfDone() {
     setTimeout(checkIfDone, 0);
 }
 function end() {
-    window.location.href = "/final";
+    window.location.href = "/guessit/host/final";
 }
