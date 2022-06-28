@@ -1,0 +1,67 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    background: rgb(116, 107, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.results {
+    position: absolute;
+    left: 50%;
+    height: 90%;
+    width: 80%;
+    border-radius: 32px;
+    text-align: center;
+    font-weight: 1000;
+    font-size: 300%;
+    top: 50%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+}
+hr {
+    width: 100%;
+    border: none;
+    height: 4px;
+    background: white;
+    border-radius: 4px;
+}
+.img {
+    position: absolute;
+    z-index: 10;
+    width: 6%;
+    top: 5%;
+    right: 12%;
+}
+.circle {
+    background: black;
+    margin: 5px;
+    border-radius: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 20px;
+    height: 20px;
+}
+.leaderboard {
+    display: block;
+    padding: 4px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 8px;
+    background-color: rgba(100, 100, 100, 0.8);
+    animation: slideinfadein 1s;
+    margin: 10px;
+}
+@keyframes slideinfadein {
+    0% {opacity: 0; margin-top: 40px;}
+    100% {opacity: 1;}
+}

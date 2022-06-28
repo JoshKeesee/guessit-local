@@ -52,4 +52,5 @@ function addplayers() {
 }
 function start() {
   localStorage.setItem("start", "1");
+  window.location.href = "/host/play";
 }

@@ -18,6 +18,7 @@ let answer2;
 let answer3;
 let correct1;
 let players = [];
+let score = 0;
 if (document.getElementById("info") != null) {
   let input = document.getElementById("info");
   input.addEventListener("keypress", function(event) {
@@ -91,17 +92,23 @@ function checkAnswer(x) {
     document.getElementById("check").innerHTML = "Correct!";
     document.getElementById("check").style.background = "#4CBB17";
     document.getElementById("check").style.zIndex = "10";
+    score = score + 100;
   } else {
     document.getElementById("check").style.opacity = "1";
     document.getElementById("check").innerHTML = "Incorrect";
     document.getElementById("check").style.background = "red";
     document.getElementById("check").style.zIndex = "10";
+    score = score - 50;
   }
 }
 function setGamecode() {
   gamecode = localStorage.getItem("gamecode");
+  setScore();
+}
+function setScore() {
   nickname = gup("nickname");
-  document.querySelector(".nickname").innerHTML = nickname;
+  document.querySelector(".nickname").innerHTML = nickname + "<br>" + score;
+  setTimeout(setScore, 0);
 }
 function hideCheck() {
   document.getElementById("check").style.zIndex = "-1";
@@ -225,4 +232,10 @@ function host() {
 function gup (name) {
   name = RegExp ('[?&]' + name.replace (/([[\]])/, '\\$1') + '=([^&#]*)');
   return (window.location.href.match (name) || ['', ''])[1];
+}
+function setTimer() {
+  setTimeout(endGame, 600000);
+}
+function endGame() {
+  localStorage.setItem(nickname, score);
 }
