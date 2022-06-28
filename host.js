@@ -11,7 +11,6 @@ if (JSON.parse(localStorage.getItem("players")) === null || JSON.parse(localStor
 } else {
   var players = JSON.parse(localStorage.getItem("players"));
 }
-let reloadto;
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -34,17 +33,10 @@ function removegame() {
   localStorage.setItem("codes", JSON.stringify(codes));
 }
 function reload() {
-  reloadto = localStorage.getItem("reload");
-  if (reloadto === "1") {
-    reloadto = "0";
-  } else {
-    reloadto = "1";
-  }
-  localStorage.setItem("reload", reloadto);
-  reloadpage("#" + reloadto);
+  setTimeout(reloadpage, 5000);
 }
 function reloadpage(r) {
-  window.location.href = r;
+  location.reload();
 }
 function addplayers() {
   players = JSON.parse(localStorage.getItem("players"));

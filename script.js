@@ -218,7 +218,5 @@ function scrollFunction() {
   }
 }
 function host() {
-  var reloadto = "";
-  localStorage.setItem("reload", reloadto);
   window.location.href = 'host';
 }
