@@ -55,7 +55,6 @@ function enterNickname() {
   }
   players.splice(players.length - 1, 0, nickname);
   localStorage.setItem("players", JSON.stringify(players));
-  localStorage.setItem("nickname", nickname);
   window.location.href = "lobby?nickname=" + nickname;
 }
 function setQuestion() {
