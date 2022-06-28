@@ -50,7 +50,7 @@ function wait() {
 }
 function addplayers() {
   players = JSON.parse(localStorage.getItem("players"));
-  for (let i = 0; i < players.length - 1; i++) {
+  for (let i = 0; i < players.length; i++) {
     var div = document.createElement("div");
     div.className = "player";
     div.innerHTML = players[i];
