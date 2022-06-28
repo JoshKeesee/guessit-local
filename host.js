@@ -10,11 +10,7 @@ if (JSON.parse(localStorage.getItem("players")) === null || JSON.parse(localStor
 } else {
   var players = JSON.parse(localStorage.getItem("players"));
 }
-if (localStorage.getItem("reload") != null && localStorage.getItem("reload") != "") {
-  var reloadto = localStorage.getItem("reload");
-} else {
-  var reloadto = '';
-}
+let reloadto;
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
