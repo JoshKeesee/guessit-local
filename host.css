@@ -98,7 +98,7 @@ body {
     transition: 0.2s;
 }
 .time {
-    font-size: 200%;
+    font-size: 100%;
     border: none;
     width: 420px;
     border-radius: 30px;
