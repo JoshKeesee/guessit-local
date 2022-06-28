@@ -50,10 +50,12 @@ function wait() {
 }
 function addplayers() {
   players = JSON.parse(localStorage.getItem("players"));
-  for (let i = 0; i < players.length; i++) {
-    var div = document.createElement("div");
-    div.className = "player";
-    div.innerHTML = players[i];
-    document.body.appendChild(div);
+  if (players[1] != "") {
+    for (let i = 0; i < players.length; i++) {
+      var div = document.createElement("div");
+      div.className = "player";
+      div.innerHTML = players[i];
+      document.body.appendChild(div);
+    }
   }
 }
