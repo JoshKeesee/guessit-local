@@ -36,11 +36,12 @@ function reload() {
   reloadto = localStorage.getItem("reload");
   if (reloadto === "#") {
     reloadto = "";
+    window.location.href = reloadto;
   } else {
     reloadto = "#";
+    setTimeout(reload, 5000)
   }
   localStorage.setItem("reload", reloadto);
-  window.location.href = reloadto;
 }
 function wait() {
   setTimeout(reload, 5000);
