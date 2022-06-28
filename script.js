@@ -40,6 +40,8 @@ function enterGamecode() {
     document.getElementById("invalid").innerHTML = "Game not found";
   } else if (questions.length === 0) {
     document.getElementById("invalid").innerHTML = "No questions in this set";
+  } else if (localStorage.getItem("start") === "1") {
+    document.getElementById("invalid").innerHTML = "This game has already started";
   } else {
     document.getElementById("invalid").innerHTML = "";
     document.getElementById("info").placeholder = "Nickname";
