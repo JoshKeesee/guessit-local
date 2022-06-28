@@ -56,7 +56,7 @@ function enterNickname() {
   players.splice(players.length - 1, 0, nickname);
   localStorage.setItem("players", JSON.stringify(players));
   localStorage.setItem("nickname", nickname);
-  window.location.href = "lobby";
+  window.location.href = "lobby?nickname=" + nickname;
 }
 function setQuestion() {
   random = Math.floor(Math.random() * 4) + 1;
@@ -100,7 +100,7 @@ function checkAnswer(x) {
 }
 function setGamecode() {
   gamecode = localStorage.getItem("gamecode");
-  nickname = localStorage.getItem("nickname");
+  nickname = gup("nickname");
   document.querySelector(".nickname").innerHTML = nickname;
 }
 function hideCheck() {
@@ -221,4 +221,8 @@ function host() {
   localStorage.setItem("players", JSON.stringify([""]));
   localStorage.setItem("start", "0");
   window.location.href = 'host';
+}
+function gup (name) {
+  name = RegExp ('[?&]' + name.replace (/([[\]])/, '\\$1') + '=([^&#]*)');
+  return (window.location.href.match (name) || ['', ''])[1];
 }
