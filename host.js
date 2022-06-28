@@ -40,8 +40,8 @@ function reloadpage(r) {
 }
 function addplayers() {
   players = JSON.parse(localStorage.getItem("players"));
-  document.querySelector("#numplayers").innerHTML = players.length;
-  if (players[1] != "") {
+  if (players[0] != "") {
+    document.querySelector("#numplayers").innerHTML = players.length;
     for (let i = 0; i < players.length; i++) {
       var div = document.createElement("div");
       div.className = "player";
