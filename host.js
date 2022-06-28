@@ -1,3 +1,4 @@
+wait();
 if (localStorage.getItem("codes") != "") {
   var codes = JSON.parse(localStorage.getItem("codes"));
   var gamecode = JSON.parse(codes[codes.length - 1]) + 1;
