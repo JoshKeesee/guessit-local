@@ -50,8 +50,13 @@ function enterGamecode() {
 }
 function enterNickname() {
   nickname = document.getElementById("info").value;
-  window.location.href = "game";
+  if (JSON.parse(localStorage.getItem("players")) != "" && JSON.parse(localStorage.getItem("players")) != null) {
+    players = JSON.parse(localStorage.getItem("players"));
+  }
+  players.splice(players.length - 1, 0, nickname);
+  localStorage.setItem("players", JSON.stringify(players));
   localStorage.setItem("nickname", nickname);
+  window.location.href = "game";
 }
 function setQuestion() {
   random = Math.floor(Math.random() * 4) + 1;
@@ -97,11 +102,6 @@ function setGamecode() {
   gamecode = localStorage.getItem("gamecode");
   nickname = localStorage.getItem("nickname");
   document.querySelector(".nickname").innerHTML = nickname;
-  if (localStorage.getItem("players") != "" && localStorage.getItem("players") != null) {
-    players = localStorage.getItem("players");
-  }
-  players.splice(players.length - 1, 0, nickname);
-  localStorage.setItem("players", players);
 }
 function hideCheck() {
   document.getElementById("check").style.zIndex = "-1";
