@@ -37,12 +37,15 @@ function reload() {
   if (reloadto === "#") {
     reloadto = "";
     localStorage.setItem("reload", reloadto);
-    window.location.href = reloadto;
+    reloadpage();
   } else {
     reloadto = "#";
     localStorage.setItem("reload", reloadto);
-    setTimeout(reload, 5000);
+    setTimeout(reloadpage, 5000);
   }
+}
+function reloadpage() {
+  window.location.href = reloadto;
 }
 function wait() {
   setTimeout(reload, 5000);
