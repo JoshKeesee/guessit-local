@@ -242,5 +242,5 @@ function setTimer() {
 }
 function endGame() {
   localStorage.setItem(nickname, score);
-  window.location.href = "/end";
+  window.location.href = "/guessit/end";
 }
