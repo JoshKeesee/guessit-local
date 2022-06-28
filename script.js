@@ -100,7 +100,9 @@ function checkAnswer(x) {
     document.getElementById("check").innerHTML = "Incorrect";
     document.getElementById("check").style.background = "red";
     document.getElementById("check").style.zIndex = "10";
-    score = score - 50;
+    if (score > 0) {
+      score = score - 50;
+    }
   }
 }
 function setGamecode() {
@@ -240,4 +242,5 @@ function setTimer() {
 }
 function endGame() {
   localStorage.setItem(nickname, score);
+  window.location.href = "/end";
 }
