@@ -218,5 +218,6 @@ function scrollFunction() {
   }
 }
 function host() {
+  localStorage.setItem("players", [""]);
   window.location.href = 'host';
 }
