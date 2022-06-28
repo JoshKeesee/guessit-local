@@ -37,6 +37,7 @@ function removegame() {
   localStorage.setItem("codes", JSON.stringify(codes));
 }
 function reload() {
+  reloadto = localStorage.getItem("reload");
   if (reloadto === "#") {
     reloadto = "";
   } else {
