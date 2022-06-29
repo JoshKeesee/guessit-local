@@ -6,6 +6,7 @@ body {
     user-select: none;
     font-family: Arial, Helvetica, sans-serif;
     background: rgb(116, 107, 255);
+    height: 100%;
 }
 .header {
     position: fixed;
@@ -29,25 +30,50 @@ body {
     width: 6.5vmin;
     height: auto;
 }
-.loader {
-    position: absolute;
-    top: 45%;
-    left: 47%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite;
-    animation: spin 2s linear infinite;
+.load {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:100px;
+    height:100px;
 }
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+.load hr {
+    border:0;
+    margin:0;
+    width:40%;
+    height:40%;
+    position:absolute;
+    border-radius:50%;
+    animation:spin 2s ease infinite;
+}  
+.load :first-child {
+    background:blue;
+    animation-delay:-1.5s;
+}
+.load :nth-child(2) {
+    background:red;
+    animation-delay:-1s;
+}
+.load :nth-child(3) {
+    background:yellow;
+    animation-delay:-0.5s;
+}
+.load :last-child {
+    background:green;
+}
+.waiting {
+    position:absolute;
+    top:65%;
+    left:50%;
+    font-weight: 1000;
+    color: white;
+    font-size: 300%;
+    transform:translate(-50%, -50%);
 }
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0%, 100%{transform:translate(0)}
+    25%{transform:translate(160%)}
+    50%{transform:translate(160%, 160%)}
+    75%{transform:translate(0, 160%)}
 }
