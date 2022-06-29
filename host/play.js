@@ -3,7 +3,7 @@ var timings = gup("time");
 var i = 0;  
 var myInterval = setInterval(Timeout, 1000);  
 function Timeout() {  
-    if (document.querySelector(".timer") != "0:00") {
+    if (document.querySelector(".timer").innerHTML != "0:00") {
         if ((timings * 60 - i) % 60 >= 10) {  
             time[0].innerHTML = parseInt(`${(timings * 60 - i) / 60}`) + ":" + `${(timings * 60 - i) % 60}`;  
         } else {  
@@ -13,7 +13,7 @@ function Timeout() {
     }
 }
 function checkIfDone() {
-    if (document.querySelector(".timer").innerHTML != "0:00") {
+    if (document.querySelector(".timer").innerHTML === "0:00") {
         setTimeout(end, 5000);
     } else {
         setTimeout(checkIfDone, 0);
