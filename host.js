@@ -53,5 +53,6 @@ function addplayers() {
 function start() {
   var time = document.querySelector(".time").value;
   localStorage.setItem("start", "1");
+  localStorage.setItem("time", time);
   window.location.href = "/guessit/host/play?time=" + time;
 }

@@ -239,7 +239,9 @@ function gup (name) {
   return (window.location.href.match (name) || ['', ''])[1];
 }
 function setTimer() {
-  setTimeout(endGame, 600000);
+  var time = gup("time");
+  time = time * 60000;
+  setTimeout(endGame, time);
 }
 function endGame() {
   localStorage.setItem(nickname, score);

@@ -7,7 +7,8 @@ function reloadpage() {
 function check() {
     if (localStorage.getItem("start") === "1") {
         var nickname = gup("nickname");
-        window.location.href = "game?nickname=" + nickname;
+        var time = localStorage.getItem("time");
+        window.location.href = "game?nickname=" + nickname + "?time=" + time;
     }
 }
 function gup (name) {
