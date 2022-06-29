@@ -20,6 +20,7 @@ body {
     padding: 40px;
     box-shadow: 0 0 6px black;
     transition: 0.2s;
+    padding-right: 100px;
 }
 .joingameinfo {
     font-size: 30%;

@@ -5,7 +5,8 @@ body, html {
     overflow: hidden;
 }
 body {
-    background: rgb(116, 107, 255);
+    background: url("../ingamebackground.jpg");
+    background-size: 100% 100%;
     font-family: Arial, Helvetica, sans-serif;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -14,15 +15,15 @@ body {
 .results {
     position: absolute;
     left: 50%;
-    height: 90%;
-    width: 80%;
+    height: 95%;
+    width: 90%;
     border-radius: 32px;
     text-align: center;
     font-weight: 1000;
     font-size: 300%;
     top: 50%;
     padding: 10px;
-    background: blue;
+    background: rgba(0, 0, 255, 0.6);
     color: white;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -39,8 +40,8 @@ hr {
     position: absolute;
     z-index: 10;
     width: 6%;
-    top: 5%;
-    right: 12%;
+    top: 2.5%;
+    right: 6%;
 }
 .circle {
     background: black;
@@ -57,7 +58,7 @@ hr {
     height: fit-content;
     width: fit-content;
     border-radius: 8px;
-    background-color: rgba(100, 100, 100, 0.8);
+    background-color: rgb(100, 100, 100);
     animation: slideinfadein 0.2s linear;
     margin: 10px;
 }
