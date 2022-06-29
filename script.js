@@ -61,9 +61,13 @@ function enterNickname() {
   if (JSON.parse(localStorage.getItem("players")) != "" && JSON.parse(localStorage.getItem("players")) != null) {
     players = JSON.parse(localStorage.getItem("players"));
   }
-  players.splice(players.length - 1, 0, nickname);
-  localStorage.setItem("players", JSON.stringify(players));
-  window.location.href = "lobby?nickname=" + nickname;
+  if (!(players.includes(nickname))) {
+    players.splice(players.length - 1, 0, nickname);
+    localStorage.setItem("players", JSON.stringify(players));
+    window.location.href = "lobby?nickname=" + nickname;
+  } else {
+    document.getElementById("invalid").innerHTML = "Nickname already in use";
+  }
 }
 function setQuestion() {
   random = Math.floor(Math.random() * 4) + 1;
