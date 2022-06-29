@@ -128,3 +128,12 @@ body {
   right: 0.5%;
   z-index: 10000000;
 }
+.score {
+  font-weight: 1000;
+  letter-spacing: 2px;
+  color: white;
+  position: fixed;
+  top: 12px;
+  right: 0.5%;
+  z-index: 10000000;
+}

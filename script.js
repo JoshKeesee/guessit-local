@@ -112,7 +112,8 @@ function setGamecode() {
 }
 function setScore() {
   nickname = gup("nickname");
-  document.querySelector(".nickname").innerHTML = nickname + "<br>" + score;
+  document.querySelector(".nickname").innerHTML = nickname;
+  document.querySelector(".score").innerHTML = "<br>" + score;
   setTimeout(setScore, 0);
 }
 function hideCheck() {
@@ -244,6 +245,7 @@ function setTimer() {
   setTimeout(endGame, time);
 }
 function endGame() {
+  nickname = document.querySelector(".nickame").innerHTML;
   localStorage.setItem(nickname, score);
   window.location.href = "/guessit/end";
 }
