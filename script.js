@@ -251,6 +251,6 @@ function setTimer() {
   setTimeout(endGame, time);
 }
 function endGame() {
-  localStorage.setItem(playername, score);
+  localStorage.setItem(playername[0], score);
   window.location.href = "/guessit/end";
 }
