@@ -19,6 +19,7 @@ let answer3;
 let correct1;
 let players = [];
 let score = 0;
+let playername = [];
 if (document.getElementById("info") != null) {
   let input = document.getElementById("info");
   input.addEventListener("keypress", function(event) {
@@ -112,13 +113,12 @@ function setGamecode() {
 }
 function setScore() {
   nickname = gup("nickname");
-  var name = [];
   for (let i = 0; nickname[i] != "?"; i++) {
-    name.push(" ");
-    name[i] = nickname[i];
+    playername.push(" ");
+    playername[i] = nickname[i];
   }
-  name = name.join("");
-  document.querySelector(".nickname").innerHTML = name;
+  playername = playername.join("");
+  document.querySelector(".nickname").innerHTML = playername;
   document.querySelector(".score").innerHTML = "<br>" + score;
   setTimeout(setScore, 0);
 }
@@ -251,7 +251,6 @@ function setTimer() {
   setTimeout(endGame, time);
 }
 function endGame() {
-  nickname = document.getElementsByClassName("nickame").innerHTML;
-  localStorage.setItem(nickname, score);
+  localStorage.setItem(playername, score);
   window.location.href = "/guessit/end";
 }
