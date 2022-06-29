@@ -14,7 +14,7 @@ function Timeout() {
 }
 function checkIfDone() {
     if (document.querySelector(".timer").innerHTML === "0:00") {
-        setTimeout(end, 5000);
+        setTimeout(end, 1000);
     } else {
         setTimeout(checkIfDone, 0);
     }
