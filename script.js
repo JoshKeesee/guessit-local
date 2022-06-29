@@ -20,6 +20,8 @@ let correct1;
 let players = [];
 let score = 0;
 let playername = [];
+let multiplier = 1;
+let rewards = ["x2 multiplier", "Score x1.5", "+50", "+200", "+500"];
 if (document.getElementById("info") != null) {
   let input = document.getElementById("info");
   input.addEventListener("keypress", function(event) {
@@ -96,20 +98,21 @@ function checkAnswer(x) {
   document.getElementById("check").style.cursor = "pointer";
   document.getElementById("continue").style.cursor = "pointer";
   document.getElementById("continue").style.opacity = "1";
-  document.getElementById("continue").style.zIndex = "11";
+  document.getElementById("continue").style.zIndex = "13";
   if (x === "answer" + random) {
     document.getElementById("check").style.opacity = "1";
     document.getElementById("check").innerHTML = "Correct!";
     document.getElementById("check").style.background = "#4CBB17";
-    document.getElementById("check").style.zIndex = "10";
-    score = score + 100;
+    document.getElementById("check").style.zIndex = "12";
+    score = score + multiplier;
+    setTimeout(showRewards, 500);
   } else {
     document.getElementById("check").style.opacity = "1";
     document.getElementById("check").innerHTML = "Incorrect";
     document.getElementById("check").style.background = "red";
-    document.getElementById("check").style.zIndex = "10";
+    document.getElementById("check").style.zIndex = "12";
     if (score > 0) {
-      score = score - 50;
+      score = score - (multiplier / 2);
     }
   }
 }
@@ -274,4 +277,57 @@ function setTimer() {
 function endGame() {
   localStorage.setItem(playername, score);
   window.location.href = "/guessit/end";
+}
+function reward(x) {
+  document.querySelector(".item1").onclick = "";
+  document.querySelector(".item2").onclick = "";
+  document.querySelector(".item3").onclick = "";
+  var randomreward = randomReward();
+  document.querySelector(".item" + x).innerHTML = randomreward;
+  if (x != 1) {
+    document.querySelector(".item1").style.opacity = "0";
+  }
+  if (x != 2) {
+    document.querySelector(".item2").style.opacity = "0";
+  }
+  if (x != 3) {
+    document.querySelector(".item3").style.opacity = "0";
+  }
+  var rewardtype = rewards.indexOf(randomreward);
+  if (rewardtype === 0) {
+    multiplier = multiplier * 2;
+  } else if (rewardtype === 1) {
+    score = Math.round(score * 1.5);
+  } else if (rewardtype === 2) {
+    score = score + 50;
+  } else if (rewardtype === 3) {
+    score = score + 200;
+  } else if (rewardtype === 4) {
+    score = score + 500;
+  }
+  setTimeout(hideRewards, 1000);
+}
+function randomReward() {
+  return random_item(rewards);
+}
+function showRewards() {
+  document.querySelector(".rewards").style.display = "block";
+  document.querySelector(".item1").style.display = "block";
+  document.querySelector(".item2").style.display = "block";
+  document.querySelector(".item3").style.display = "block";
+  document.querySelector(".item1").onclick = function() { reward(1) };
+  document.querySelector(".item2").onclick = function() { reward(2) };
+  document.querySelector(".item3").onclick = function() { reward(3) };
+}
+function hideRewards() {
+  document.querySelector(".rewards").style.display = "none";
+  document.querySelector(".item1").style.display = "none";
+  document.querySelector(".item2").style.display = "none";
+  document.querySelector(".item3").style.display = "none";
+  document.querySelector(".item1").style.opacity = "1";
+  document.querySelector(".item2").style.opacity = "1";
+  document.querySelector(".item3").style.opacity = "1";
+  document.querySelector(".item1").innerHTML = "Reward 1";
+  document.querySelector(".item2").innerHTML = "Reward 2";
+  document.querySelector(".item3").innerHTML = "Reward 3";
 }
