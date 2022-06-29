@@ -112,7 +112,7 @@ function setGamecode() {
 }
 function setScore() {
   nickname = gup("nickname");
-  var name = "";
+  var name = [];
   for (let i = 0; nickname[i] != "?"; i++) {
     name.push(" ");
     name[i] = nickname[i];
