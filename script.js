@@ -109,9 +109,6 @@ function checkAnswer(x) {
 }
 function setGamecode() {
   gamecode = localStorage.getItem("gamecode");
-  setScore();
-}
-function setScore() {
   nickname = gup("nickname");
   for (let i = 0; nickname[i] != "?"; i++) {
     playername.push(" ");
@@ -119,6 +116,9 @@ function setScore() {
   }
   playername = playername.join("");
   document.querySelector(".nickname").innerHTML = playername;
+  setScore();
+}
+function setScore() {
   document.querySelector(".score").innerHTML = "<br>" + score;
   setTimeout(setScore, 0);
 }
