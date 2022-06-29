@@ -15,8 +15,9 @@ function Timeout() {
 function checkIfDone() {
     if (document.querySelector(".timer").innerHTML === "0:00") {
         setTimeout(end, 5000);
+    } else {
+        setTimeout(checkIfDone, 0);
     }
-    setTimeout(checkIfDone, 0);
 }
 function end() {
     window.location.href = "/guessit/host/final";
