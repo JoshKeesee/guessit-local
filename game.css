@@ -61,6 +61,7 @@ body {
 }
 .answerbox {
   display: flex;
+  overflow-y: auto;
   width: 49%;
   height: 12%;
   border-radius: 10px;
