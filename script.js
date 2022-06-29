@@ -35,7 +35,9 @@ function enterGamecode() {
   gamecode = document.getElementById("info").value;
   localStorage.setItem("gamecode", gamecode);
   codes = JSON.parse(localStorage.getItem("codes"));
-  if (gamecode === "0") {
+  if (gamecode === "1") {
+    document.getElementById("invalid").innerHTML = "Game not found";
+  } else if (gamecode === "0") {
     document.getElementById("invalid").innerHTML = "Game not found";
   } else if (!(codes.includes(gamecode))) {
     document.getElementById("invalid").innerHTML = "Game not found";
