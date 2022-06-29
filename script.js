@@ -1,8 +1,8 @@
 let codes = [];
 let gamecode;
 let nickname;
-let questions = ["What is 3 * 3?", "What is 3 - 2?"];
-let answers = [{correct: "9", first: "10", second: "8", third: "6" }, { correct: "1", first: "0", second: "2", third: "-1" }];
+let questions = [];
+let answers = [];
 if (localStorage.getItem("answers") != null) {
   answers = JSON.parse(localStorage.getItem("answers"));
   questions = JSON.parse(localStorage.getItem("questions"));
