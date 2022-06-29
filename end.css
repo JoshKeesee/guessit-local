@@ -49,13 +49,13 @@ body, html {
 .results {
     height: fit-content;
     width: 80%;
-    background: blue;
+    background: white;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     position: absolute;
     top: 55%;
     left: 50%;
-    color: white;
+    color: black;
     font-size: 400%;
     text-align: center;
     border-radius: 32px;
