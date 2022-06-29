@@ -117,7 +117,7 @@ function setScore() {
     name.push(" ");
     name[i] = nickname[i];
   }
-  name.join(",");
+  name.join("");
   document.querySelector(".nickname").innerHTML = name;
   document.querySelector(".score").innerHTML = "<br>" + score;
   setTimeout(setScore, 0);
