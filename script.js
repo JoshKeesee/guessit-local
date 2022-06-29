@@ -114,7 +114,8 @@ function setScore() {
   nickname = gup("nickname");
   var name = "";
   for (let i = 0; nickname[i] != "?"; i++) {
-    name.push(nickname[i]);
+    name.push(" ");
+    name[i] = nickname[i];
   }
   document.querySelector(".nickname").innerHTML = name;
   document.querySelector(".score").innerHTML = "<br>" + score;
