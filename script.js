@@ -153,6 +153,8 @@ function addQuestion() {
   document.getElementById("createQuestion").style.zIndex = "11";
   document.getElementById("submitQuestion").style.opacity = "1";
   document.getElementById("submitQuestion").style.zIndex = "12";
+  document.getElementById("deleteQuestion").style.opacity = "1";
+  document.getElementById("deleteQuestion").onclick = function() { deleteQuestion(null) };
 }
 function save() {
   correct1 = document.getElementById("a1").value;
@@ -184,6 +186,17 @@ function save() {
   }
   updateLists();
 }
+function deleteQuestion(y) {
+  if (y != null) {
+    questions.splice(y, 1);
+    localStorage.setItem("questions", JSON.stringify(questions));
+    answers.splice(y, 1);
+    localStorage.setItem("answers", JSON.stringify(answers));
+    resetQuestions();
+  } else {
+    save();
+  }
+}
 function resetQuestions() {
   location.reload();
 }
@@ -208,6 +221,8 @@ function edit(y) {
   document.getElementById("createQuestion").style.zIndex = "11";
   document.getElementById("submitQuestion").style.opacity = "1";
   document.getElementById("submitQuestion").style.zIndex = "12";
+  document.getElementById("deleteQuestion").style.opacity = "1";
+  document.getElementById("deleteQuestion").onclick = function() { deleteQuestion(y) };
   document.getElementById("a1").value = answers[y].correct;
   document.getElementById("a2").value = answers[y].first;
   document.getElementById("a3").value = answers[y].second;
