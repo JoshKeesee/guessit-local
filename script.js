@@ -251,7 +251,7 @@ function setTimer() {
   setTimeout(endGame, time);
 }
 function endGame() {
-  nickname = document.querySelector(".nickame").innerHTML;
+  nickname = document.getElementsByClassName("nickame").innerHTML;
   localStorage.setItem(nickname, score);
   window.location.href = "/guessit/end";
 }
