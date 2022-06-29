@@ -3,8 +3,9 @@ function check() {
         var nickname = gup("nickname");
         var time = localStorage.getItem("time");
         window.location.href = "game?nickname=" + nickname + "?time=" + time;
+    } else {
+        setTimeout(check, 0);
     }
-    setTimeout(check, 0);
 }
 function gup (name) {
     name = RegExp ('[?&]' + name.replace (/([[\]])/, '\\$1') + '=([^&#]*)');
