@@ -47,7 +47,7 @@ function refreshData() {
     }, 1000);
 }
 function showLeaderboard() {
-    for (let i = 0; i < document.getElementsByClassName("player").length; i++) {
+    for (let i = 0; i < players.length; i++) {
         document.getElementsByClassName("player")[i].remove();
     }
     for (i = 0; i < data.length; i++) {

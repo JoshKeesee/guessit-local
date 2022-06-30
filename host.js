@@ -43,7 +43,7 @@ function addplayers() {
   }
 }
 function removePlayers() {
-  for (let x = 0; x < document.getElementsByClassName("player").length; x++) {
+  for (let x = 0; x < players.length; x++) {
     document.getElementsByClassName("player")[x].remove();
 }
 }
