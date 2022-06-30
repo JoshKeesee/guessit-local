@@ -64,8 +64,7 @@ function enterNickname() {
     document.getElementById("invalid").innerHTML = "Please enter a nickname";
   } else if (JSON.parse(localStorage.getItem("players")) != "" && JSON.parse(localStorage.getItem("players")) != null) {
     players = JSON.parse(localStorage.getItem("players"));
-  }
-  if (!(players.includes(nickname))) {
+  } else if (!(players.includes(nickname))) {
     players.splice(players.length - 1, 0, nickname);
     localStorage.setItem("players", JSON.stringify(players));
     window.location.href = "lobby?nickname=" + nickname;
