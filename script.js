@@ -62,6 +62,7 @@ function enterNickname() {
   nickname = nickname.split(" ").join("");
   if (JSON.parse(localStorage.getItem("players")) != "" && JSON.parse(localStorage.getItem("players")) != null) {
     players = JSON.parse(localStorage.getItem("players"));
+  }
   if (nickname === "") {
     document.getElementById("invalid").innerHTML = "Please enter a nickname";
   } else if (!(players.includes(nickname))) {
