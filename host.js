@@ -29,7 +29,7 @@ function refreshData() {
     players = JSON.parse(localStorage.getItem("players"));
     removePlayers();
     addplayers();
-  }, 1000)
+  }, 850)
 }
 function addplayers() {
   if (players[0] != "") {
