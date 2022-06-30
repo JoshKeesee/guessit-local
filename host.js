@@ -43,9 +43,10 @@ function addplayers() {
   }
 }
 function removePlayers() {
-  for (let x = 0; x < players.length; x++) {
-    document.getElementsByClassName("player")[x].remove();
-}
+  var removeDivs = document.querySelectorAll(".player");
+  for (let i = 0; i < removeDivs.length; i++) {
+      removeDivs[i].remove();
+  }
 }
 function start() {
   var time = document.querySelector(".time").value;

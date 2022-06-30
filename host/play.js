@@ -47,8 +47,9 @@ function refreshData() {
     }, 1000);
 }
 function showLeaderboard() {
-    for (let i = 0; i < players.length; i++) {
-        document.getElementsByClassName("player")[i].remove();
+    var removeDivs = document.querySelectorAll(".player");
+    for (let i = 0; i < removeDivs.length; i++) {
+        removeDivs[i].remove();
     }
     for (i = 0; i < data.length; i++) {
         var div = document.createElement("div");
