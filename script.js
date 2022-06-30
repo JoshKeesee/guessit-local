@@ -107,7 +107,7 @@ function checkAnswer(x) {
     document.getElementById("check").style.background = "#4CBB17";
     document.getElementById("check").style.zIndex = "12";
     score = score + multiplier;
-    setTimeout(showRewards, 500);
+    setTimeout(showRewards, 200);
   } else {
     document.getElementById("check").style.opacity = "1";
     document.getElementById("check").innerHTML = "Incorrect";
