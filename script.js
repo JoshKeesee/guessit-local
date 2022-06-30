@@ -117,7 +117,7 @@ function checkAnswer(x) {
       score = score - (multiplier / 2);
     }
   }
-  localStorage.setItem(nickname, score);
+  localStorage.setItem(playername, score);
 }
 function setGamecode() {
   gamecode = localStorage.getItem("gamecode");
