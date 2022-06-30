@@ -311,7 +311,7 @@ function reward(x) {
   } else if (rewardtype === 7) {
     score = score + 750;
   } else if (rewardtype === 8) {
-    score = score / 2;
+    score = Math.round(score / 2);
   }
   setTimeout(hideRewards, 1000);
 }
