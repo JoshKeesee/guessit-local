@@ -21,7 +21,7 @@ let players = [];
 let score = 0;
 let playername = [];
 let multiplier = 1;
-let rewards = ["x2 multiplier", "Score x1.5", "+50", "+200", "+500", "x3 multiplier", "+1", "+750"];
+let rewards = ["x2 multiplier", "Score x1.5", "+50", "+200", "+500", "x3 multiplier", "+1", "+750", "Lose half"];
 if (document.getElementById("info") != null) {
   let input = document.getElementById("info");
   input.addEventListener("keypress", function(event) {
@@ -310,6 +310,8 @@ function reward(x) {
     score = score + 1;
   } else if (rewardtype === 7) {
     score = score + 750;
+  } else if (rewardtype === 8) {
+    score = score / 2;
   }
   setTimeout(hideRewards, 1000);
 }
