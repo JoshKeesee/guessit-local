@@ -27,6 +27,7 @@ function showLeaderboard() {
 function getScores() {
     for (i = 0; i < players.length; i++) {
         scores.push(localStorage.getItem(players[i]));
+        localStorage.removeItem(players[i]);
     }
     i = 0;
     for (let x = 0; x < players.length; x++) {
