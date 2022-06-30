@@ -2,6 +2,7 @@ var time = document.getElementsByClassName("timer");
 var timings = gup("time");
 var i = 0;
 var x = 0;  
+let y = 0;
 var scores = [];
 var players = [];
 var data = []; 
@@ -33,13 +34,13 @@ function refreshData() {
     setInterval(function() {
         data = [];
         players = JSON.parse(localStorage.getItem("players"));
-        for (x = 0; x < players.length; x++) {
-            scores.push(localStorage.getItem(players[x]));
+        for (y = 0; y < players.length; y++) {
+            scores.push(localStorage.getItem(players[y]));
         }
-        for (let x = 0; x < players.length; x++) {
+        for (let y = 0; y < players.length; y++) {
             data.push({name: "", score: ""});
-            data[x].name = players[x];
-            data[x].score = scores[x];
+            data[y].name = players[y];
+            data[y].score = scores[y];
         }
         data = data.sort(function(a,b) { return b.score - a.score });
         showLeaderboard();
