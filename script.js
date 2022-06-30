@@ -60,10 +60,10 @@ function enterGamecode() {
 function enterNickname() {
   nickname = document.getElementById("info").value;
   nickname = nickname.split(" ").join("");
+  if (JSON.parse(localStorage.getItem("players")) != "" && JSON.parse(localStorage.getItem("players")) != null) {
+    players = JSON.parse(localStorage.getItem("players"));
   if (nickname === "") {
     document.getElementById("invalid").innerHTML = "Please enter a nickname";
-  } else if (JSON.parse(localStorage.getItem("players")) != "" && JSON.parse(localStorage.getItem("players")) != null) {
-    players = JSON.parse(localStorage.getItem("players"));
   } else if (!(players.includes(nickname))) {
     players.splice(players.length - 1, 0, nickname);
     localStorage.setItem("players", JSON.stringify(players));
