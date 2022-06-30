@@ -33,6 +33,7 @@ function gup (name) {
 function refreshData() {
     setInterval(function() {
         data = [];
+        scores = [];
         players = JSON.parse(localStorage.getItem("players"));
         for (y = 0; y < players.length; y++) {
             scores.push(localStorage.getItem(players[y]));
