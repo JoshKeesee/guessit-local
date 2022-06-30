@@ -341,4 +341,5 @@ function hideRewards() {
   document.querySelector(".item1").innerHTML = "Reward 1";
   document.querySelector(".item2").innerHTML = "Reward 2";
   document.querySelector(".item3").innerHTML = "Reward 3";
+  localStorage.setItem(playername, score);
 }
