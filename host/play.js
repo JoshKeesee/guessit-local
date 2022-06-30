@@ -4,8 +4,7 @@ var i = 0;
 var x = 0;  
 var scores = [];
 var players = [];
-var data = [];
-var myInterval = setInterval(Timeout, 1000);  
+var data = []; 
 function Timeout() {  
     if (document.querySelector(".timer").innerHTML != "0:00") {
         if ((timings * 60 - x) % 60 >= 10) {  
