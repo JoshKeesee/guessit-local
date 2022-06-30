@@ -1,18 +1,19 @@
 var time = document.getElementsByClassName("timer");
 var timings = gup("time");
-var i = 0;  
+var i = 0;
+var x = 0;  
 var scores = [];
 var players = [];
 var data = [];
 var myInterval = setInterval(Timeout, 1000);  
 function Timeout() {  
     if (document.querySelector(".timer").innerHTML != "0:00") {
-        if ((timings * 60 - i) % 60 >= 10) {  
-            time[0].innerHTML = parseInt(`${(timings * 60 - i) / 60}`) + ":" + `${(timings * 60 - i) % 60}`;  
+        if ((timings * 60 - x) % 60 >= 10) {  
+            time[0].innerHTML = parseInt(`${(timings * 60 - x) / 60}`) + ":" + `${(timings * 60 - x) % 60}`;  
         } else {  
-            time[0].innerHTML = parseInt(`${(timings * 60 - i) / 60}`) + ":0" + `${(timings * 60 - i) % 60}`;  
+            time[0].innerHTML = parseInt(`${(timings * 60 - x) / 60}`) + ":0" + `${(timings * 60 - x) % 60}`;  
         }  
-        i++;
+        x++;
     }
 }
 function checkIfDone() {
