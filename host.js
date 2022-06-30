@@ -13,7 +13,7 @@ function addgame() {
   } else {
     players = JSON.parse(localStorage.getItem("players"));
   }
-  gamecode = codes[codes.length - 1] + 1;
+  gamecode = JSON.parse(codes[codes.length - 1]) + 1;
   prevPlayers = players;
   codes.push(JSON.stringify(gamecode));
   localStorage.setItem("codes", JSON.stringify(codes));
