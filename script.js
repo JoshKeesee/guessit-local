@@ -127,6 +127,7 @@ function setGamecode() {
     playername[i] = nickname[i];
   }
   playername = playername.join("");
+  localStorage.setItem(playername, score);
   document.querySelector(".nickname").innerHTML = playername;
   setScore();
 }
