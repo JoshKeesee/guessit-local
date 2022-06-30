@@ -97,10 +97,15 @@ body {
     border-radius: 8px;
     display: inline-block;
     transition: 0.2s;
+    animation: pop 0.2s;
 }
 .time {
     font-size: 100%;
     border: none;
     width: 420px;
     border-radius: 30px;
+}
+@keyframes pop {
+    0% {transform: scale(1.2);}
+    100% {transform: scale(1);}
 }
