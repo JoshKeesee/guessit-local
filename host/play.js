@@ -34,8 +34,8 @@ function refreshData() {
     setInterval(function() {
         data = [];
         players = JSON.parse(localStorage.getItem("players"));
-        for (i = 0; i < players.length; i++) {
-            scores.push(localStorage.getItem(players[i]));
+        for (x = 0; x < players.length; x++) {
+            scores.push(localStorage.getItem(players[x]));
         }
         for (let x = 0; x < players.length; x++) {
             data.push({name: "", score: ""});
@@ -47,8 +47,8 @@ function refreshData() {
     }, 1000);
 }
 function showLeaderboard() {
-    for (i = 0; i < document.querySelectorAll(".player").length; i++) {
-        document.querySelectorAll(".player")[i].remove();
+    for (let i = 0; i < document.getElementsByClassName("player").length; i++) {
+        document.getElementsByClassName("player")[i].remove();
     }
     for (i = 0; i < data.length; i++) {
         var div = document.createElement("div");

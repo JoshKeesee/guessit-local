@@ -43,9 +43,9 @@ function addplayers() {
   }
 }
 function removePlayers() {
-  for (let x = 0; x < document.querySelectorAll(".player").length; x++) {
-    document.querySelectorAll(".player")[x].remove();
-  }
+  for (let x = 0; x < document.getElementsByClassName("player").length; x++) {
+    document.getElementsByClassName("player")[x].remove();
+}
 }
 function start() {
   var time = document.querySelector(".time").value;
