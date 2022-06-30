@@ -53,4 +53,14 @@ hr {
     text-align: center;
     width: fit-content;
     display: block;
+    border-radius: 8px;
+}
+.circle {
+    background: black;
+    margin: 5px;
+    border-radius: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 20px;
+    height: 20px;
 }

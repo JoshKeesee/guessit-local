@@ -1,4 +1,3 @@
-let prevPlayers = [];
 let gamecode;
 let players = [];
 var elem = document.documentElement;
@@ -14,7 +13,6 @@ function addgame() {
     players = JSON.parse(localStorage.getItem("players"));
   }
   gamecode = JSON.parse(codes[codes.length - 1]) + 1;
-  prevPlayers = players;
   codes.push(JSON.stringify(gamecode));
   localStorage.setItem("codes", JSON.stringify(codes));
   document.querySelector(".code").innerHTML = gamecode;
@@ -28,12 +26,9 @@ function removegame() {
 }
 function refreshData() {
   setInterval(function() { 
-    players = JSON.parse(localStorage.getItem("players")); 
-    if (prevPlayers != players) {
-      removePlayers();
-      addplayers();
-      prevPlayers = players;
-    }
+    players = JSON.parse(localStorage.getItem("players"));
+    removePlayers();
+    addplayers();
   }, 0)
 }
 function addplayers() {

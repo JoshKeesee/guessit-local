@@ -1,6 +1,9 @@
 var time = document.getElementsByClassName("timer");
 var timings = gup("time");
 var i = 0;  
+var scores = [];
+var players = [];
+var data = [];
 var myInterval = setInterval(Timeout, 1000);  
 function Timeout() {  
     if (document.querySelector(".timer").innerHTML != "0:00") {
@@ -25,4 +28,31 @@ function end() {
 function gup (name) {
     name = RegExp ('[?&]' + name.replace (/([[\]])/, '\\$1') + '=([^&#]*)');
     return (window.location.href.match (name) || ['', ''])[1];
+}
+function refreshData() {
+    setInterval(function() {
+        data = [];
+        players = JSON.parse(localStorage.getItem("players"));
+        for (i = 0; i < players.length; i++) {
+            scores.push(localStorage.getItem(players[i]));
+        }
+        for (let x = 0; x < players.length; x++) {
+            data.push({name: "", score: ""});
+            data[x].name = players[x];
+            data[x].score = scores[x];
+        }
+        data = data.sort(function(a,b) { return b.score - a.score });
+        showLeaderboard();
+    }, 1000);
+}
+function showLeaderboard() {
+    for (i = 0; i < document.querySelectorAll(".player").length; i++) {
+        document.querySelectorAll(".player")[i].remove();
+    }
+    for (i = 0; i < data.length; i++) {
+        var div = document.createElement("div");
+        div.className = "player";
+        div.innerHTML = "<span class='circle'>" + (i + 1) + "</span>" + data[i].name + " " + data[i].score;
+        document.querySelector(".sidebar").appendChild(div);
+    }
 }
