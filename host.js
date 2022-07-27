@@ -6,6 +6,7 @@ function addgame() {
     var codes = JSON.parse(localStorage.getItem("codes"));
   } else {
     var codes = ["1"];
+    localStorage.setItem("codes", JSON.stringify(codes));
   }
   if (JSON.parse(localStorage.getItem("players")) === null || JSON.parse(localStorage.getItem("players")) === "") {
     players = [""];
