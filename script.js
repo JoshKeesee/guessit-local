@@ -339,8 +339,8 @@ function hideRewards() {
   document.querySelector(".item1").style.opacity = "1";
   document.querySelector(".item2").style.opacity = "1";
   document.querySelector(".item3").style.opacity = "1";
-  document.querySelector(".item1").innerHTML = "Reward 1";
-  document.querySelector(".item2").innerHTML = "Reward 2";
-  document.querySelector(".item3").innerHTML = "Reward 3";
+  document.querySelector(".item1").innerHTML = "<img class='reward' src='reward.png'>";
+  document.querySelector(".item2").innerHTML = "<img class='reward' src='reward.png'>";
+  document.querySelector(".item3").innerHTML = "<img class='reward' src='reward.png'>";
   localStorage.setItem(playername, score);
 }

@@ -156,8 +156,8 @@ body {
   border-radius: 16px;
   color: white;
   font-size: 300%;
-  padding-top: 20%;
-  padding-bottom: 20%;
+  padding-top: 10%;
+  padding-bottom: 10%;
   transition: 0.2s;
   cursor: pointer;
   display: none;
@@ -184,4 +184,8 @@ body {
   top: 55%;
   left: 80%;
   background: green;
+}
+.reward {
+  width: 50%;
+  height: auto;
 }
