@@ -2,7 +2,7 @@ let gamecode;
 let players = [];
 var elem = document.documentElement;
 function addgame() {
-  if (localStorage.getItem("codes") != "") {
+  if (localStorage.getItem("codes") != "" && localStorage.getItem("codes") != null) {
     var codes = JSON.parse(localStorage.getItem("codes"));
   } else {
     var codes = ["1"];
