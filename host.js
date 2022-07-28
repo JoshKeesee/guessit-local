@@ -3,7 +3,7 @@ let players = [];
 var elem = document.documentElement;
 setInterval(checkStart, 0);
 function checkStart() {
-  if (players.length > 1 && document.querySelector(".time").value != "") {
+  if (players[0] != "" && document.querySelector(".time").value != "") {
     document.querySelector(".start").style.opacity = "1";
     document.querySelector(".start").style.cursor = "pointer";
     document.querySelector(".start").disabled = false;
