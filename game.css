@@ -36,34 +36,34 @@ body {
   background: red;
   position: absolute;
   top: 70%;
-  left: 7px;
+  left: 1%;
   box-shadow: 0 10px darkred;
 }
 .answer2 {
   background: blue;
   position: absolute;
   top: 70%;
-  right: 7px;
+  right: 1%;
   box-shadow: 0 10px darkblue;
 }
 .answer3 {
   background: gold;
   position: absolute;
   top: 85%;
-  left: 7px;
+  left: 1%;
   box-shadow: 0 10px darkgoldenrod;
 }
 .answer4 {
   background: green;
   position: absolute;
   top: 85%;
-  right: 7px;
+  right: 1%;
   box-shadow: 0 10px darkgreen;
 }
 .answerbox {
   display: flex;
   overflow-y: auto;
-  width: 49%;
+  width: 48%;
   height: 12%;
   border-radius: 10px;
   transition: 0.2s;
@@ -155,7 +155,7 @@ body {
   text-align: center;
   border-radius: 16px;
   color: white;
-  font-size: 300%;
+  font-size: 3vmin;
   padding-top: 10%;
   padding-bottom: 10%;
   transition: 0.2s;
