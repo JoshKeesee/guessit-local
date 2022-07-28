@@ -1,6 +1,18 @@
 let gamecode;
 let players = [];
 var elem = document.documentElement;
+setInterval(checkStart, 0);
+function checkStart() {
+  if (players.length > 1 && document.querySelector(".time").value != "") {
+    document.querySelector(".start").style.opacity = "1";
+    document.querySelector(".start").style.cursor = "pointer";
+    document.querySelector(".start").disabled = false;
+  } else {
+    document.querySelector(".start").style.opacity = "0";
+    document.querySelector(".start").style.cursor = "default";
+    document.querySelector(".start").disabled = true;
+  }
+}
 function addgame() {
   if (localStorage.getItem("codes") != "" && localStorage.getItem("codes") != null) {
     var codes = JSON.parse(localStorage.getItem("codes"));
