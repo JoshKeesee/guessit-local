@@ -59,3 +59,7 @@ function showLeaderboard() {
         document.querySelector(".sidebar").appendChild(div);
     }
 }
+function setTimer() {
+    localStorage.setItem("time", document.querySelector(".timer").innerHTML);
+    setTimeout(setTimer, 0);
+}

@@ -1,8 +1,7 @@
 function check() {
     if (localStorage.getItem("start") === "1") {
         var nickname = gup("nickname");
-        var time = localStorage.getItem("time");
-        window.location.href = "game?nickname=" + nickname + "?time=" + time;
+        window.location.href = "game?nickname=" + nickname;
     } else {
         setTimeout(check, 0);
     }

@@ -274,9 +274,11 @@ function gup (name) {
   return (window.location.href.match (name) || ['', ''])[1];
 }
 function setTimer() {
-  var time = gup("time");
-  time = time * 60000;
-  setTimeout(endGame, time);
+  if (localStorage.getItem("time") === "0:00") {
+    endGame();
+  } else {
+    setTimeout(setTimer, 0);
+  }
 }
 function endGame() {
   localStorage.setItem(playername, score);
