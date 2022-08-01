@@ -122,11 +122,7 @@ function checkAnswer(x) {
 function setGamecode() {
   gamecode = localStorage.getItem("gamecode");
   nickname = gup("nickname");
-  for (let i = 0; nickname[i] != "?"; i++) {
-    playername.push(" ");
-    playername[i] = nickname[i];
-  }
-  playername = playername.join("");
+  playername = nickname;
   localStorage.setItem(playername, score);
   document.querySelector(".nickname").innerHTML = playername;
   setScore();
