@@ -25,7 +25,7 @@ function addgame() {
   } else {
     players = JSON.parse(localStorage.getItem("players"));
   }
-  gamecode = JSON.parse(codes[codes.length - 1]) + 1;
+  gamecode = codes.length;
   codes.push(JSON.stringify(gamecode));
   localStorage.setItem("codes", JSON.stringify(codes));
   document.querySelector(".code").innerHTML = gamecode;
@@ -34,7 +34,7 @@ function addgame() {
 }
 function removegame() {
   codes = JSON.parse(localStorage.getItem("codes"));
-  codes.splice(gamecode - 1, 1);
+  codes[JSON.parse(gamecode) - 1] = "";
   localStorage.setItem("codes", JSON.stringify(codes));
 }
 function refreshData() {
