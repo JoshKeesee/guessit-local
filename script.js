@@ -278,7 +278,7 @@ function setTimer() {
 }
 function endGame() {
   localStorage.setItem(playername, score);
-  window.location.href = "/guessit/end";
+  window.location.href = "/guessit-local/end";
 }
 function reward(x) {
   document.querySelector(".item1").onclick = "";

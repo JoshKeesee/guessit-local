@@ -24,7 +24,7 @@ function checkIfDone() {
     }
 }
 function end() {
-    window.location.href = "/guessit/host/final";
+    window.location.href = "/guessit-local/host/final";
 }
 function gup (name) {
     name = RegExp ('[?&]' + name.replace (/([[\]])/, '\\$1') + '=([^&#]*)');
